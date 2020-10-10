@@ -53,6 +53,11 @@ Desktop.ini
 ehthumbs.db
 Thumbs.db
 
+# ----------------------------------------------------------------------
+# | Coverage                                                           |
+# ----------------------------------------------------------------------
+.nyc_output
+coverage
 
 # dotenv environment variables file
 .env
