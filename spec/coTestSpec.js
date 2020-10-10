@@ -6,6 +6,16 @@ const { CarInsurance, Product } = coTest;
 
 describe('Co Test', function() {
   describe('CarInsurance', () => {
+    describe('when there is no products', () => {
+      it('should return an empty array of products', () => {
+        const carInsurance = new CarInsurance();
+
+        const products = carInsurance.updatePrice();
+
+        expect(products).to.have.lengthOf(0);
+      });
+    });
+
     describe('Low Coverage', () => {
       it('should decrese price by one before sell date', () => {
         const carInsurance = new CarInsurance([
@@ -143,22 +153,28 @@ describe('Co Test', function() {
       it('should increase price by two between ten and five days to sell date', () => {
         const carInsurance = new CarInsurance([
           new Product('Special Full Coverage', 7, 20),
+          new Product('Special Full Coverage', 7, 49),
         ]);
 
         const products = carInsurance.updatePrice();
 
         expect(products[0].sellIn).equal(6);
         expect(products[0].price).equal(22);
+        expect(products[1].sellIn).equal(6);
+        expect(products[1].price).equal(50);
       });
       it('should increase price by three between five and zero days to sell date', () => {
         const carInsurance = new CarInsurance([
           new Product('Special Full Coverage', 3, 20),
+          new Product('Special Full Coverage', 2, 48),
         ]);
 
         const products = carInsurance.updatePrice();
 
         expect(products[0].sellIn).equal(2);
         expect(products[0].price).equal(23);
+        expect(products[1].sellIn).equal(1);
+        expect(products[1].price).equal(50);
       });
       it('should drop price to zero after sell date', () => {
         const carInsurance = new CarInsurance([
