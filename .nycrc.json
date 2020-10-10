@@ -1,3 +1,3 @@
 {
-  "exclude": ["spec/*.js"]
+  "exclude": ["spec/**/*.spec.js"]
 }
