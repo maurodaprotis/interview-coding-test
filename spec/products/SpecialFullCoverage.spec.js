@@ -12,22 +12,22 @@ describe('Special Full Coverage', () => {
 
     expect(product.price).equal(0);
   });
-  it('should increase price by one when more than ten of sale left', () => {
-    const product = new SpecialFullCoverage(12, 20);
+  it('should increase price by one when more than or ten of sale left', () => {
+    const product = new SpecialFullCoverage(11, 20);
 
     product.updatePrice();
 
     expect(product.price).equal(21);
   });
   it('should increase price by two when between ten and five days of sale left', () => {
-    const product = new SpecialFullCoverage(9, 20);
+    const product = new SpecialFullCoverage(10, 20);
 
     product.updatePrice();
 
     expect(product.price).equal(22);
   });
   it('should increase price by one when less than 5 of sale left', () => {
-    const product = new SpecialFullCoverage(3, 20);
+    const product = new SpecialFullCoverage(1, 20);
 
     product.updatePrice();
 

@@ -6,10 +6,10 @@ class SpecialFullCoverage extends Product {
   }
 
   _getPriceIncrement() {
-    if (this.sellIn > 10) {
+    if (this.sellIn >= 10) {
       return 1;
     }
-    if (this.sellIn < 10 && this.sellIn > 5) {
+    if (this.sellIn < 10 && this.sellIn >= 5) {
       return 2;
     }
     return 3;
