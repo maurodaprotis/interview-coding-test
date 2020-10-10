@@ -7,7 +7,7 @@ const { CarInsurance, Product } = coTest;
 describe('Co Test', function() {
   describe('CarInsurance', () => {
     describe('Low Coverage', () => {
-      it('should decrese price by one before sellIn', () => {
+      it('should decrese price by one before sell date', () => {
         const carInsurance = new CarInsurance([
           new Product('Low Coverage', 5, 7),
         ]);
@@ -17,7 +17,7 @@ describe('Co Test', function() {
         expect(products[0].sellIn).equal(4);
         expect(products[0].price).equal(6);
       });
-      it('should decrease price by two after sellIn', () => {
+      it('should decrease price by two after sell date', () => {
         const carInsurance = new CarInsurance([
           new Product('Low Coverage', 0, 4),
         ]);
@@ -27,7 +27,7 @@ describe('Co Test', function() {
         expect(products[0].sellIn).equal(-1);
         expect(products[0].price).equal(2);
       });
-      it('should not decrease price after 0', () => {
+      it('should not decrease price after zero', () => {
         const carInsurance = new CarInsurance([
           new Product('Low Coverage', 4, 0),
           new Product('Low Coverage', -3, 0),
@@ -42,7 +42,7 @@ describe('Co Test', function() {
       });
     });
     describe('Medium Coverage', () => {
-      it('should decrese price by one before sellIn', () => {
+      it('should decrese price by one before sell date', () => {
         const carInsurance = new CarInsurance([
           new Product('Medium Coverage', 15, 20),
         ]);
@@ -52,7 +52,7 @@ describe('Co Test', function() {
         expect(products[0].sellIn).equal(14);
         expect(products[0].price).equal(19);
       });
-      it('should decrease price by two after sellIn', () => {
+      it('should decrease price by two after sell date', () => {
         const carInsurance = new CarInsurance([
           new Product('Medium Coverage', -2, 4),
         ]);
@@ -62,7 +62,7 @@ describe('Co Test', function() {
         expect(products[0].sellIn).equal(-3);
         expect(products[0].price).equal(2);
       });
-      it('should not decrease price after 0', () => {
+      it('should not decrease price after zero', () => {
         const carInsurance = new CarInsurance([
           new Product('Medium Coverage', 4, 0),
           new Product('Medium Coverage', -3, 0),
@@ -95,7 +95,7 @@ describe('Co Test', function() {
       });
     });
     describe('Full Coverage', () => {
-      it('should increase price by one before sellIn', () => {
+      it('should increase price by one before sell date', () => {
         const carInsurance = new CarInsurance([
           new Product('Full Coverage', 15, 20),
         ]);
@@ -105,7 +105,7 @@ describe('Co Test', function() {
         expect(products[0].sellIn).equal(14);
         expect(products[0].price).equal(21);
       });
-      it('should increase price by two after sellIn', () => {
+      it('should increase price by two after sell date', () => {
         const carInsurance = new CarInsurance([
           new Product('Full Coverage', -2, 4),
         ]);
@@ -115,7 +115,7 @@ describe('Co Test', function() {
         expect(products[0].sellIn).equal(-3);
         expect(products[0].price).equal(6);
       });
-      it('should not increase price after 50', () => {
+      it('should not increase price after fifty', () => {
         const carInsurance = new CarInsurance([
           new Product('Full Coverage', 4, 50),
           new Product('Full Coverage', -3, 49),
@@ -130,7 +130,7 @@ describe('Co Test', function() {
       });
     });
     describe('Special Full Coverage', () => {
-      it('should increase price by one before 10 days to sellIn', () => {
+      it('should increase price by one before ten days to sell date', () => {
         const carInsurance = new CarInsurance([
           new Product('Special Full Coverage', 15, 20),
         ]);
@@ -140,7 +140,7 @@ describe('Co Test', function() {
         expect(products[0].sellIn).equal(14);
         expect(products[0].price).equal(21);
       });
-      it('should increase price by two between 10 and 5 days to sellIn', () => {
+      it('should increase price by two between ten and five days to sell date', () => {
         const carInsurance = new CarInsurance([
           new Product('Special Full Coverage', 7, 20),
         ]);
@@ -150,7 +150,7 @@ describe('Co Test', function() {
         expect(products[0].sellIn).equal(6);
         expect(products[0].price).equal(22);
       });
-      it('should increase price by three between 5 and 0 days to sellIn', () => {
+      it('should increase price by three between five and zero days to sell date', () => {
         const carInsurance = new CarInsurance([
           new Product('Special Full Coverage', 3, 20),
         ]);
@@ -160,7 +160,7 @@ describe('Co Test', function() {
         expect(products[0].sellIn).equal(2);
         expect(products[0].price).equal(23);
       });
-      it('should drop price to zero after sellIn', () => {
+      it('should drop price to zero after sell date', () => {
         const carInsurance = new CarInsurance([
           new Product('Special Full Coverage', 0, 40),
         ]);
@@ -172,7 +172,7 @@ describe('Co Test', function() {
       });
     });
     xdescribe('Super Sale', () => {
-      it('should decrese price by two before sellIn', () => {
+      it('should decrese price by two before sell date', () => {
         const carInsurance = new CarInsurance([
           new Product('Super Sale', 5, 7),
         ]);
@@ -182,7 +182,7 @@ describe('Co Test', function() {
         expect(products[0].sellIn).equal(4);
         expect(products[0].price).equal(5);
       });
-      it('should decrease price by four after sellIn', () => {
+      it('should decrease price by four after sell date', () => {
         const carInsurance = new CarInsurance([
           new Product('Super Sale', 0, 4),
         ]);
