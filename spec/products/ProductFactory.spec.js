@@ -7,6 +7,7 @@ const {
   FullCoverage,
   SpecialFullCoverage,
   SuperSale,
+  PeakCoverage,
   ProductFactory,
 } = require('../../src/products');
 
@@ -57,5 +58,12 @@ describe('ProductFactory', () => {
     );
 
     expect(instance).to.be.an.instanceOf(SuperSale);
+  });
+  it('should instantiate Peak Coverage product', () => {
+    const instance = ProductFactory.getInstance(
+      new Product('Peak Coverage', 10, 10)
+    );
+
+    expect(instance).to.be.an.instanceOf(PeakCoverage);
   });
 });

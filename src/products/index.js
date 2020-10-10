@@ -5,6 +5,7 @@ const { FullCoverage } = require('./FullCoverage');
 const { SpecialFullCoverage } = require('./SpecialFullCoverage');
 const { MegaCoverage } = require('./MegaCoverage');
 const { SuperSale } = require('./SuperSale');
+const { PeakCoverage } = require('./PeakCoverage');
 const { ProductFactory } = require('./ProductFactory');
 
 module.exports = {
@@ -15,5 +16,6 @@ module.exports = {
   SpecialFullCoverage,
   MegaCoverage,
   SuperSale,
+  PeakCoverage,
   ProductFactory,
 };
