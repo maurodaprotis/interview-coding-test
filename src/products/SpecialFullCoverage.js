@@ -5,17 +5,21 @@ class SpecialFullCoverage extends Product {
     super(`Special Full Coverage`, sellIn, price);
   }
 
-  updatePrice() {
-    this.sellIn = this.sellIn - 1;
+  _getPriceIncrement() {
     if (this.sellIn > 10) {
-      this.price = Math.min(this.price + 1, 50);
-    } else if (this.sellIn < 10 && this.sellIn > 5) {
-      this.price = Math.min(this.price + 2, 50);
-    } else if (this.sellIn < 5 && this.sellIn > 0) {
-      this.price = Math.min(this.price + 3, 50);
-    } else {
-      this.price = 0;
+      return 1;
     }
+    if (this.sellIn < 10 && this.sellIn > 5) {
+      return 2;
+    }
+    return 3;
+  }
+
+  updatePrice() {
+    this._substractOneDay();
+    this.price = this._isOnSale()
+      ? this.price + this._getPriceIncrement()
+      : Product.MIN_PRICE;
 
     return this;
   }

@@ -6,12 +6,8 @@ class SuperSale extends Product {
   }
 
   updatePrice() {
-    this.sellIn = this.sellIn - 1;
-    if (this.sellIn > 0) {
-      this.price = Math.max(this.price - 2, 0);
-    } else {
-      this.price = Math.max(this.price - 4, 0);
-    }
+    this._substractOneDay();
+    this.price = this._isOnSale() ? this.price - 2 : this.price - 4;
 
     return this;
   }
