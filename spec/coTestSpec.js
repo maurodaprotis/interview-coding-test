@@ -14,6 +14,14 @@ describe('Co Test', function() {
 
         expect(products).to.have.lengthOf(0);
       });
+
+      describe('when unsupported products', () => {
+        it('should throw an error', () => {
+          expect(
+            () => new CarInsurance([new Product('Unknown Coverage', 10, 10)])
+          ).to.throw('Product Unknown Coverage is not supported');
+        });
+      });
     });
 
     describe('Low Coverage', () => {
