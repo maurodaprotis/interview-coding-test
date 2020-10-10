@@ -13,7 +13,7 @@ describe('Product', () => {
     expect(product.price).equal(0);
   });
   it('should decrease price by one on sale', () => {
-    const product = new Product('Product', 10, 20);
+    const product = new Product('Product', 1, 20);
 
     product.updatePrice();
 

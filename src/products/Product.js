@@ -25,7 +25,7 @@ class Product {
   }
 
   _isOnSale() {
-    return this.sellIn > 0;
+    return this.sellIn >= 0;
   }
 
   updatePrice() {
