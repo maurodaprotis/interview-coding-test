@@ -195,7 +195,7 @@ describe('Co Test', function() {
         expect(products[0].price).equal(0);
       });
     });
-    xdescribe('Super Sale', () => {
+    describe('Super Sale', () => {
       it('should decrese price by two before sell date', () => {
         const carInsurance = new CarInsurance([
           new Product('Super Sale', 5, 7),
