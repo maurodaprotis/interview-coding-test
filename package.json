@@ -8,7 +8,7 @@
     "lint:ts": "tsc -p ./tsconfig.json --noEmit",
     "test": "jest",
     "build": "rimraf ./build && tsc",
-    "after-30-days": "node scripts/products-after-30-days.js"
+    "after-30-days": "npm run build && node scripts/products-after-30-days.js"
   },
   "husky": {
     "hooks": {
