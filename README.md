@@ -93,3 +93,7 @@ for (let i = 1; i <= 30; i += 1) {
 11. Add `Peak Coverage` feature to test how much changes would require adding a new Product.
 12. Remove `Low Coverage` and `Medium Coverage` since it can be covered by the default behaviour.
 13. Remove duplicate test after reviewing the code.
+
+### Extras
+
+In the branch `typescript` I switched the things a little bit. I added `TypeScript` to the project, added `eslint`, switched test runner to `jest`, added `Husky` for having pre-commit and pre-push hooks to run the linter and the tests before introducing any change to the project.
