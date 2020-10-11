@@ -8,4 +8,6 @@ RUN npm install
 
 COPY . .
 
+RUN npm run test
+
 RUN npm run after-30-days
