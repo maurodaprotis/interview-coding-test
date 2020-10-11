@@ -1,5 +1,4 @@
-const { expect } = require('chai');
-const { PeakCoverage } = require('../../src/products');
+import { PeakCoverage } from './PeakCoverage';
 
 describe('Peak Coverage', () => {
   it('should increase price by one on sale', () => {
@@ -7,20 +6,20 @@ describe('Peak Coverage', () => {
 
     product.updatePrice();
 
-    expect(product.price).equal(21);
+    expect(product.price).toEqual(21);
   });
   it('should decrease price by one after sale', () => {
     const product = new PeakCoverage(0, 20);
 
     product.updatePrice();
 
-    expect(product.price).equal(19);
+    expect(product.price).toEqual(19);
   });
   it('should decrease sell in by one after update', () => {
     const product = new PeakCoverage(0, 20);
 
     product.updatePrice();
 
-    expect(product.sellIn).equal(-1);
+    expect(product.sellIn).toEqual(-1);
   });
 });

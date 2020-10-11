@@ -1,5 +1,4 @@
-const { expect } = require('chai');
-const {
+import {
   Product,
   MegaCoverage,
   FullCoverage,
@@ -7,7 +6,7 @@ const {
   SuperSale,
   PeakCoverage,
   ProductFactory,
-} = require('../../src/products');
+} from './index';
 
 describe('ProductFactory', () => {
   it('should instantiate default product', () => {
@@ -15,41 +14,41 @@ describe('ProductFactory', () => {
       new Product('Medium Coverage', 10, 10)
     );
 
-    expect(instance).to.be.an.instanceOf(Product);
+    expect(instance).toBeInstanceOf(Product);
   });
   it('should instantiate Mega Coverage product', () => {
     const instance = ProductFactory.getInstance(
       new Product('Mega Coverage', 10, 10)
     );
 
-    expect(instance).to.be.an.instanceOf(MegaCoverage);
+    expect(instance).toBeInstanceOf(MegaCoverage);
   });
   it('should instantiate Full Coverage product', () => {
     const instance = ProductFactory.getInstance(
       new Product('Full Coverage', 10, 10)
     );
 
-    expect(instance).to.be.an.instanceOf(FullCoverage);
+    expect(instance).toBeInstanceOf(FullCoverage);
   });
   it('should instantiate Special Full Coverage product', () => {
     const instance = ProductFactory.getInstance(
       new Product('Special Full Coverage', 10, 10)
     );
 
-    expect(instance).to.be.an.instanceOf(SpecialFullCoverage);
+    expect(instance).toBeInstanceOf(SpecialFullCoverage);
   });
   it('should instantiate Super Sale product', () => {
     const instance = ProductFactory.getInstance(
       new Product('Super Sale', 10, 10)
     );
 
-    expect(instance).to.be.an.instanceOf(SuperSale);
+    expect(instance).toBeInstanceOf(SuperSale);
   });
   it('should instantiate Peak Coverage product', () => {
     const instance = ProductFactory.getInstance(
       new Product('Peak Coverage', 10, 10)
     );
 
-    expect(instance).to.be.an.instanceOf(PeakCoverage);
+    expect(instance).toBeInstanceOf(PeakCoverage);
   });
 });

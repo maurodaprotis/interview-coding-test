@@ -1,7 +1,5 @@
-const { expect } = require('chai');
-
-const { CarInsurance } = require('../src/CarInsurance');
-const { Product } = require('../src/products/Product');
+import { CarInsurance } from './CarInsurance';
+import { Product } from './products';
 
 describe('CarInsurance', () => {
   it('should return an empty array on update without products', () => {
@@ -9,7 +7,7 @@ describe('CarInsurance', () => {
 
     const products = carInsurance.updatePrice();
 
-    expect(products).to.have.lengthOf(0);
+    expect(products.length).toEqual(0);
   });
   it('should update provided products', () => {
     const carInsurance = new CarInsurance([
@@ -18,8 +16,8 @@ describe('CarInsurance', () => {
 
     const products = carInsurance.updatePrice();
 
-    expect(products).to.have.lengthOf(1);
-    expect(products[0].price).equal(9);
-    expect(products[0].sellIn).equal(9);
+    expect(products.length).toEqual(1);
+    expect(products[0].price).toEqual(9);
+    expect(products[0].sellIn).toEqual(9);
   });
 });
