@@ -1,8 +1,6 @@
 const { expect } = require('chai');
 const {
   Product,
-  LowCoverage,
-  MediumCoverage,
   MegaCoverage,
   FullCoverage,
   SpecialFullCoverage,
@@ -12,24 +10,12 @@ const {
 } = require('../../src/products');
 
 describe('ProductFactory', () => {
-  it('should throw error on unknown product', () => {
-    expect(() =>
-      ProductFactory.getInstance(new Product('Unknown Coverage', 10, 10))
-    ).to.throw('Product Unknown Coverage is not supported');
-  });
-  it('should instantiate Low Coverage product', () => {
-    const instance = ProductFactory.getInstance(
-      new Product('Low Coverage', 10, 10)
-    );
-
-    expect(instance).to.be.an.instanceOf(LowCoverage);
-  });
-  it('should instantiate Medium Coverage product', () => {
+  it('should instantiate default product', () => {
     const instance = ProductFactory.getInstance(
       new Product('Medium Coverage', 10, 10)
     );
 
-    expect(instance).to.be.an.instanceOf(MediumCoverage);
+    expect(instance).to.be.an.instanceOf(Product);
   });
   it('should instantiate Mega Coverage product', () => {
     const instance = ProductFactory.getInstance(

@@ -1,10 +1,9 @@
 const { FullCoverage } = require('./FullCoverage');
-const { MediumCoverage } = require('./MediumCoverage');
 const { MegaCoverage } = require('./MegaCoverage');
-const { LowCoverage } = require('./LowCoverage');
 const { SpecialFullCoverage } = require('./SpecialFullCoverage');
 const { SuperSale } = require('./SuperSale');
 const { PeakCoverage } = require('./PeakCoverage');
+const { Product } = require('./Product');
 
 class ProductFactory {
   static getInstance({ name, sellIn, price }) {
@@ -15,16 +14,12 @@ class ProductFactory {
         return new FullCoverage(sellIn, price);
       case 'Special Full Coverage':
         return new SpecialFullCoverage(sellIn, price);
-      case 'Low Coverage':
-        return new LowCoverage(sellIn, price);
-      case 'Medium Coverage':
-        return new MediumCoverage(sellIn, price);
       case 'Super Sale':
         return new SuperSale(sellIn, price);
       case 'Peak Coverage':
         return new PeakCoverage(sellIn, price);
       default:
-        throw new Error(`Product ${name} is not supported`);
+        return new Product(name, sellIn, price);
     }
   }
 }

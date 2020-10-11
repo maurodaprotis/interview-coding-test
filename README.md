@@ -91,3 +91,5 @@ for (let i = 1; i <= 30; i += 1) {
 9. Fix issues on edge cases related to sellIn comparations not being inclusive.
 10. Add `after-30-days` script.
 11. Add `Peak Coverage` feature to test how much changes would require adding a new Product.
+12. Remove `Low Coverage` and `Medium Coverage` since it can be covered by the default behaviour.
+13. Remove duplicate test after reviewing the code.

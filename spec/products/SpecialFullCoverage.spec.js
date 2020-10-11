@@ -2,16 +2,6 @@ const { expect } = require('chai');
 const { SpecialFullCoverage } = require('../../src/products');
 
 describe('Special Full Coverage', () => {
-  it('should max price at fifty', () => {
-    const product = new SpecialFullCoverage(10, 100);
-
-    expect(product.price).equal(50);
-  });
-  it('should min price at zero', () => {
-    const product = new SpecialFullCoverage(10, -100);
-
-    expect(product.price).equal(0);
-  });
   it('should increase price by one when more than or ten of sale left', () => {
     const product = new SpecialFullCoverage(11, 20);
 
