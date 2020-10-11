@@ -38,5 +38,3 @@ export class Product {
     return this;
   }
 }
-
-exports.Product = Product;

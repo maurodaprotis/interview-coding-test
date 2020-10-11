@@ -30,4 +30,3 @@ var ProductFactory = /** @class */ (function () {
     return ProductFactory;
 }());
 exports.ProductFactory = ProductFactory;
-exports.ProductFactory = ProductFactory;

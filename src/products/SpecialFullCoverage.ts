@@ -24,4 +24,3 @@ export class SpecialFullCoverage extends Product {
     return this;
   }
 }
-exports.SpecialFullCoverage = SpecialFullCoverage;

@@ -32,4 +32,3 @@ var PeakCoverage = /** @class */ (function (_super) {
     return PeakCoverage;
 }(Product_1.Product));
 exports.PeakCoverage = PeakCoverage;
-exports.PeakCoverage = PeakCoverage;

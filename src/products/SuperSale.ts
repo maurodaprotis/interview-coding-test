@@ -12,4 +12,3 @@ export class SuperSale extends Product {
     return this;
   }
 }
-exports.SuperSale = SuperSale;

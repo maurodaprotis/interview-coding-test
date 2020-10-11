@@ -15,4 +15,3 @@ var CarInsurance = /** @class */ (function () {
     return CarInsurance;
 }());
 exports.CarInsurance = CarInsurance;
-exports.CarInsurance = CarInsurance;

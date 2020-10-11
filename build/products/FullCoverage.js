@@ -28,4 +28,3 @@ var FullCoverage = /** @class */ (function (_super) {
     return FullCoverage;
 }(Product_1.Product));
 exports.FullCoverage = FullCoverage;
-exports.FullCoverage = FullCoverage;

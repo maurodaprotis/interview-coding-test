@@ -35,4 +35,3 @@ var Product = /** @class */ (function () {
     return Product;
 }());
 exports.Product = Product;
-exports.Product = Product;

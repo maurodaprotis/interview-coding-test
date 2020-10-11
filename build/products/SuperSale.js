@@ -28,4 +28,3 @@ var SuperSale = /** @class */ (function (_super) {
     return SuperSale;
 }(Product_1.Product));
 exports.SuperSale = SuperSale;
-exports.SuperSale = SuperSale;

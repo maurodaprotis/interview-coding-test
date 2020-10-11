@@ -31,4 +31,3 @@ export class ProductFactory {
     }
   }
 }
-exports.ProductFactory = ProductFactory;

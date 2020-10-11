@@ -39,4 +39,3 @@ var SpecialFullCoverage = /** @class */ (function (_super) {
     return SpecialFullCoverage;
 }(Product_1.Product));
 exports.SpecialFullCoverage = SpecialFullCoverage;
-exports.SpecialFullCoverage = SpecialFullCoverage;

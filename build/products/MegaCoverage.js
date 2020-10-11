@@ -37,4 +37,3 @@ var MegaCoverage = /** @class */ (function (_super) {
     return MegaCoverage;
 }(Product_1.Product));
 exports.MegaCoverage = MegaCoverage;
-exports.MegaCoverage = MegaCoverage;

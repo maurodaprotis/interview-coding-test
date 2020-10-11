@@ -18,4 +18,3 @@ export class MegaCoverage extends Product {
     return this;
   }
 }
-exports.MegaCoverage = MegaCoverage;

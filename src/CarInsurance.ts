@@ -14,5 +14,3 @@ export class CarInsurance {
     return this.products;
   }
 }
-
-exports.CarInsurance = CarInsurance;

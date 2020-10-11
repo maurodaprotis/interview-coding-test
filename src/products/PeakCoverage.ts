@@ -17,4 +17,3 @@ export class PeakCoverage extends Product {
     return this;
   }
 }
-exports.PeakCoverage = PeakCoverage;
