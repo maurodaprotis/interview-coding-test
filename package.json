@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --ext .ts",
+    "lint:ts": "tsc -p ./tsconfig.json --noEmit",
     "test": "jest",
     "build": "rimraf ./build && tsc",
     "after-30-days": "node scripts/products-after-30-days.js"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm run lint:ts && lint-staged",
+      "pre-push": "npm run test"
     }
   },
   "repository": {
